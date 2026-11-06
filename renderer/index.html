@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exam Attendance & Export Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>Exam Attendance</h1>
+  <div class="sub">Tick everyone who was present for today's exam, then generate a Word or Excel file listing only them.</div>
+
+  <div class="toolbar">
+    <input type="text" id="examTitle" placeholder="Exam title (e.g. Written Test Chapter 3)" />
+    <input type="date" id="examDate" />
+  </div>
+
+  <div class="toolbar">
+    <input type="text" id="search" placeholder="Search a name..." />
+    <button class="btn-ghost" id="selectAllBtn">Select all</button>
+    <button class="btn-ghost" id="clearAllBtn">Clear all</button>
+    <span class="count" id="countLabel">0 selected</span>
+  </div>
+
+  <div class="toolbar hidden" id="addRow">
+    <input type="text" id="newNameInput" placeholder="Full name to add..." />
+    <button class="btn-primary" id="confirmAddBtn">Add</button>
+    <button class="btn-ghost" id="cancelAddBtn">Cancel</button>
+  </div>
+
+  <div class="list" id="list"></div>
+
+  <div class="footer">
+    <button class="btn-ghost" id="addNameBtn">+ Add a name</button>
+    <button class="btn-primary" id="exportDocxBtn">Generate Word file (.docx)</button>
+    <button class="btn-primary" id="exportXlsxBtn">Generate Excel file (.xlsx)</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">Saved</div>
+
+<script src="renderer.js"></script>
+</body>
+</html>

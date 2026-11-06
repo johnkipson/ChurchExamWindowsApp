@@ -1,0 +1,18 @@
+# Render Blueprint: New + → Blueprint → pick this repo.
+# Render will ask you for DATABASE_URL and API_KEY on first deploy.
+services:
+  - type: web
+    name: exam-attendance-api
+    runtime: node
+    plan: free
+    rootDir: api
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: NODE_VERSION
+        value: "20"

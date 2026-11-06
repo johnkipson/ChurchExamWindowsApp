@@ -1,0 +1,38 @@
+{
+  "name": "exam-attendance-app",
+  "version": "1.0.0",
+  "description": "Exam Attendance & Word/Excel Export Tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "docx": "^8.5.0",
+    "xlsx": "^0.18.5"
+  },
+  "build": {
+    "appId": "com.local.examattendance",
+    "productName": "Exam Attendance",
+    "files": [
+      "main.js",
+      "preload.js",
+      "config.json",
+      "src/**/*",
+      "renderer/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}

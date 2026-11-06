@@ -1,0 +1,21 @@
+{
+  "name": "exam-attendance-api",
+  "version": "1.0.0",
+  "description": "Express + Postgres API for the Exam Attendance app",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --env-file=.env --watch src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "docx": "^8.5.0",
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "xlsx": "^0.18.5"
+  }
+}
